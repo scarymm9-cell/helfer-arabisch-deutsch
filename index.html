@@ -1,13 +1,295 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Helfer - تطبيق عربي ألماني لمساعدة المهاجرين في ألمانيا على فهم الرسائل وكتابة الردود وتجهيز الكلام للطبيب والصيدلية." />
-    <title>Helfer Arabisch Deutsch</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helfer - مساعدك العربي في ألمانيا</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eff6ff;
+      color: #0f172a;
+      line-height: 1.8;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #dbeafe;
+      padding: 18px 24px;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #2563eb;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.3;
+      margin: 0 0 18px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    p {
+      color: #475569;
+      font-size: 17px;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 14px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dbeafe;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .demo {
+      background: white;
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+      margin: 40px 0;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      padding: 16px;
+      font-size: 16px;
+      resize: vertical;
+      outline: none;
+      background: #f8fafc;
+    }
+
+    .result {
+      margin-top: 18px;
+      background: #f8fafc;
+      border-radius: 22px;
+      padding: 18px;
+      border: 1px solid #e2e8f0;
+      display: none;
+    }
+
+    .german {
+      direction: ltr;
+      text-align: left;
+      background: #0f172a;
+      color: white;
+      padding: 18px;
+      border-radius: 18px;
+      white-space: pre-wrap;
+      margin-top: 12px;
+    }
+
+    .warning {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 24px;
+      padding: 22px;
+      margin: 30px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      border-top: 1px solid #dbeafe;
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">Helfer</div>
+      <a href="#demo" class="btn">جرّب الفكرة</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="badge">تطبيق عملي للمهاجرين العرب في ألمانيا</div>
+
+        <h1>
+          افهم الرسائل الألمانية، واكتب ردودًا رسمية، وحضّر كلامك للطبيب والصيدلية.
+        </h1>
+
+        <p>
+          Helfer هو تطبيق عربي ألماني يساعد المهاجرين في ألمانيا على فهم الأوراق،
+          كتابة الردود الرسمية، ترجمة المواقف المهمة، وفهم المصطلحات الطبية والإدارية.
+        </p>
+
+        <a href="#demo" class="btn">ابدأ الآن</a>
+      </div>
+
+      <div class="card">
+        <h2>ماذا يفعل التطبيق؟</h2>
+        <p>
+          تكتب المشكلة أو تصور الرسالة، فيعطيك التطبيق شرحًا بالعربية وردًا ألمانيًا جاهزًا.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>الأقسام الأساسية</h2>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📄</div>
+          <h3>الرسائل والأوراق</h3>
+          <p>Jobcenter، التأمين الصحي، البلدية، المدرسة، السكن.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🩺</div>
+          <h3>الطبيب والصيدلية</h3>
+          <p>تحضير الكلام بالألمانية وفهم التعليمات المهمة.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌍</div>
+          <h3>مترجم المواقف</h3>
+          <p>ترجمة حسب الموقف وليس ترجمة حرفية فقط.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📚</div>
+          <h3>قاموس طبي وإداري</h3>
+          <p>مصطلحات ألمانية مهمة مع شرح عربي بسيط.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="demo">
+      <h2>جرّب فكرة التطبيق</h2>
+
+      <p>
+        اكتب المشكلة بالعربية، والتطبيق يعطيك مثالًا على شرح ورد ألماني.
+      </p>
+
+      <textarea id="userText">وصلتني رسالة من الجوب سنتر ولا أفهم المطلوب مني.</textarea>
+
+      <br><br>
+
+      <button class="btn" onclick="showResult()">تحليل وإنشاء رد</button>
+
+      <div id="result" class="result">
+        <h3>شرح مبسط</h3>
+        <p>
+          غالبًا الجهة تريد منك إرسال وثيقة أو إثبات. انتبه إلى كلمة
+          <strong>Frist</strong> لأنها تعني آخر موعد للرد.
+        </p>
+
+        <h3>نص ألماني جاهز</h3>
+        <div class="german">Sehr geehrte Damen und Herren,
+
+ich habe Ihr Schreiben erhalten. Leider ist mir nicht ganz klar, welche Unterlagen genau benötigt werden. Könnten Sie mir bitte mitteilen, welche Nachweise ich einreichen soll?
+
+Mit freundlichen Grüßen</div>
+      </div>
+    </section>
+
+    <section class="warning">
+      <h2>تنبيه مهم</h2>
+      <p>
+        هذا التطبيق يساعد في الفهم واللغة وكتابة الرسائل.
+        لا يُعتبر استشارة قانونية أو طبية، ولا يستبدل الطبيب أو المحامي أو الجهة الرسمية.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Helfer - مساعدك العربي في ألمانيا
+  </footer>
+
+  <script>
+    function showResult() {
+      document.getElementById("result").style.display = "block";
+    }
+  </script>
+</body>
 </html>
